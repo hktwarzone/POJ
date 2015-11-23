@@ -22,7 +22,6 @@ Solution: https://oeis.org/A001187/b001187.txt
 */
 
 #include <iostream>
-#include <climits>
 #include <vector>
 
 using namespace std;
