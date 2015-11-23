@@ -93,10 +93,7 @@ BigInt operator*(const BigInt &a, const BigInt &b) {
     for (int i = n - 1; i >= 0; i--) {
         for (int j = m - 1; j >= 0; j--) {
             int sum = (res[i + j + 1] - '0') + (a.num[i] - '0') * (b.num[j] - '0');
-            int c = sum / 10;
-            if (c > 0) {
-                res[i + j] = (char)(((int)(res[i + j] - '0') + c) + '0');
-            }
+            res[i + j] += (sum / 10);
             res[i + j + 1] = (char)(sum % 10 + '0');
         }
     }
